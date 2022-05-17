@@ -1,5 +1,5 @@
 # Bronchial Tree
-Codes for the final project of the subject MATLAB-and-its-applications-on-engineering taught in the Universitat Politènica de Catalunya. This project is a part of a more wide research on tuberculosis lesions on animal models of Macacs by the UPC research group BIOCOM-SC.
+Codes for the final project of the subject MATLAB-and-its-applications-on-engineering taught in the Universitat Politènica de Catalunya. This project is a part of a research on tuberculosis lesions on animal models of Macacs by the UPC research group BIOCOM-SC.
 
 ## Briew description
   - bronchialTree.m : main code. Right now it computes the brochial branches irrigating the lobes of the right lung.
