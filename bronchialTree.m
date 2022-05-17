@@ -30,7 +30,7 @@ dTraq = 7.8; % Tracha diameter
 
 % Matrix contaning all branches: each row is a bronchial branch
 % Meaning of each column:
-%  1: Howe many branches there are between this one and the trachea
+%  1: How many branches there are between this one and the trachea
 %  2: In which row is its mother branch
 %  3: Diameter
 %  4: Longitude
@@ -217,6 +217,20 @@ for k = 1:ll
     patch(fR,'FaceColor',plcolor,'FaceAlpha',0.15,'EdgeColor','none') % Represent patch object
 end
 
+% Left lung
+R = double(ismember(segments,12:20)); % Get the desired volume of the matrix segments
+fR = isosurface(R, 0.99);  % Create the patch object, isovalue = 0.99 since we want the contour
+fR.faces = fliplr(fR.faces); % Ensure normals point OUT
+coordenades_carina = [253 279 171];
+dX = 0.310547; % mida x pixel en mm
+dY = 0.310547; % mida y pixel en mm
+dZ = 0.625; % mida z pixel en mm
+fR = transformar_coordenades(fR,coordenades_carina,[dX dY dZ]); % Escalate to real values
+patch(fR,'FaceColor',[0.75, 0.75, 0],'FaceAlpha',0.15,'EdgeColor','none') % Represent patch object
+
+xlabel('x-axis','Interpreter','latex')
+ylabel('y-axis','Interpreter','latex')
+zlabel('z-axis','Interpreter','latex')
 
 % Function to represent the volumes ---------------------------------------
 function fv = transformar_coordenades(fv,xc,dx)
