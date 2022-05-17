@@ -14,4 +14,5 @@ Take into account that the project is not finished yet.
 
 
 Núria Mercadé Besora
-Last modification: 17 - 05 - 2022
+
+Last version: 17 - 05 - 2022
